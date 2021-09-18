@@ -1,0 +1,43 @@
+.act-container{
+    background: var(--black-5);
+    padding: 4rem 3rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    grid-column: span 3;
+}
+
+.act-container .game-label{
+    color: var(--black-100);
+    max-width: 39rem;
+}
+
+.options-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media only screen and (max-width: 600px) {
+    .act-container{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        padding: 0;
+    }
+
+    .options-container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .act-container .game-label{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        padding: 1rem;
+    }
+}

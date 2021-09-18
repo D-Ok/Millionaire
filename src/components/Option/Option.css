@@ -1,0 +1,120 @@
+.option-container{
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    margin: 1rem 0;
+
+    --height: var(--option-height);
+    --width: var(--option-width);
+    --margin-size: 5%;
+    --border-color: var(--orange-100);
+    --var-background-image-option: url("/src/images/desktop-option-default.png");
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+.option-container.no-hover{
+    pointer-events: none;
+}
+
+.option{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    justify-self: center;
+    box-sizing: border-box;
+
+}
+
+
+.option-text-container{
+    margin: 0 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+
+}
+
+.option-text{
+    flex: none;
+    flex-grow: 0;
+    margin: 0 8px;
+}
+
+.option-text.option-label{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: start;
+}
+
+.option-id{
+    color: var(--orange-80);
+}
+
+.option-label{
+    font-weight: var(--light-font-weight);
+    color: var(--black-100)
+}
+
+
+.option-container.can-hover:hover{
+    outline: none;
+    cursor: pointer;
+    --border-color: var(--orange-100);
+    --var-background-image-option: url("/src/images/desktop-option-hover.png");
+}
+
+.option-container.no-hover:hover{
+    outline: none;
+    cursor: default;
+}
+
+
+.option-container:focus{
+    outline: none;
+}
+
+.option-type-default{
+    --border-color: var(--black-40);
+    --var-background-image-option: url("/src/images/desktop-option-default.png");
+}
+
+.option-type-correct{
+    --border-color: var(--green-100);
+    --var-background-image-option: url("/src/images/desktop-option-correct.png");
+}
+.option-type-incorrect{
+    --border-color: var(--red-100);
+    --var-background-image-option: url("/src/images/desktop-option-incorrect.png");
+}
+.option-type-selected{
+    --border-color: var(--orange-100);
+    --var-background-image-option: url("/src/images/desktop-option-selected.png");
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    .option-container {
+        --var-background-image-option: url("/src/images/mobile-option-default.png");
+    }
+
+    .option-type-correct{
+        --var-background-image-option: url("/src/images/mobile-option-correct.png");
+    }
+    .option-type-incorrect{
+        --var-background-image-option: url("/src/images/mobile-option-incorrect.png");
+    }
+    .option-type-selected{
+        --var-background-image-option: url("/src/images/mobile-option-selected.png");
+    }
+
+    .option-container{
+        margin: 0.25rem 0;
+        justify-content: space-between;
+    }
+}
+
+

@@ -1,38 +1,157 @@
-.App {
-  text-align: center;
+@import "views/MainScreen/MainScreen.css";
+@import "views/GameScreen/GameScreen.css";
+@import "components/ScoreBoard/ScoreBoard.css";
+@import "components/Button/Button.css";
+@import "components/Option/Option.css";
+@import "components/Step/Step.css";
+@import "components/Act/Act.css";
+
+html {
+  --orange-120: #E87928;
+  --orange-100: #FF8B37;
+  --orange-80: #FFAC70;
+  --orange-5: #FFF3EB;
+
+  --green-100: #47D867;
+  --green-5: #E6FAEA;
+
+  --red-100: #EC6259;
+  --red-5: #FDEEED;
+
+  --black-100: #1C1C21;
+  --black-40: #D0D0D8;
+  --black-5: #F5F5F7;
+
+  --white-100: #ffffff;
+
+  --default-font-size: 20px;
+  --default-font-weight: 600;
+  --light-font-weight: normal;
+
+  --question-font-size: 32px;
+  --headline-font-size: 56px;
+
+  --border-radius: 12px;
+  --buttop-height: 64px;
+  --buttop-width: 296px;
+
+  --option-height: 72px;
+  --option-width: 373px;
+
+  --prize-height: 40px;
+  --prize-width: 240px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@media only screen and (max-width: 1100px) {
+  html {
+    --default-font-size: 16px;
+    --question-font-size: 24px;
+    --headline-font-size: 44px;
+    --border-radius: 10px;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    --buttop-height: 54px;
+    --buttop-width: 292px;
+
+    --option-height: 64px;
+    --option-width: 260px;
+
+    --prize-height: 32px;
+    --prize-width: 220px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+@media only screen and (max-width: 600px) {
+  html {
+    --default-font-size: 14px;
+    --question-font-size: 18px;
+    --headline-font-size: 32px;
+    --border-radius: 8px;
 
-.App-link {
-  color: #61dafb;
-}
+    --buttop-height: 48px;
+    --buttop-width: 288px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+    --option-height: 56px;
+    --option-width: 288px;
+
+    --prize-height: 32px;
+    --prize-width: 240px;
   }
 }
+
+* {
+  font-family: Inter, serif;
+  font-style: normal;
+  font-weight: var(--default-font-weight);
+  font-size: var(--default-font-size);
+  line-height: 116%;
+
+  color: #C4C4C4;
+}
+
+body{
+  margin: 0;
+}
+
+.App{
+  height: 100vh;
+}
+
+
+.image-base{
+  height: var(--height);
+  width: var(--width);
+
+  position: absolute;
+  top: 0;
+  left: calc(50% - var(--width)/2);
+
+  z-index: 10;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  background-image: var(--var-background-image-option);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/*@media only screen and (min-width: 600px) {*/
+/*  .image-base{*/
+/*    min-width: auto;*/
+/*    min-height: auto;*/
+
+/*    height: var(--height);*/
+/*    width: var(--width);*/
+/*  }*/
+/*}*/
+
+.line-container{
+  position: relative;
+  padding: 0 var(--margin-size);
+  height: var(--height);
+}
+
+.line-container:after{
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  border-top: 1px solid  var(--border-color);
+}
+
+.game-header{
+  font-size: var(--headline-font-size);
+  color: var(--black-100);
+  margin: 0 0 64px;
+}
+
+.game-label{
+  font-size: var(--question-font-size);
+  margin: 0;
+}
+
+
+
+

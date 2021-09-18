@@ -1,0 +1,22 @@
+
+.button{
+    background: var(--orange-100);
+    text-align: center;
+    height: var(--buttop-height);
+    width: var(--buttop-width);
+    color: var(--white-100);
+
+    cursor: pointer;
+    border: none;
+    border-radius: var(--border-radius);
+}
+
+.button:hover{
+    outline: none;
+    background: var(--orange-80);
+}
+
+.button:focus{
+    outline: none;
+    background: var(--orange-120);
+}

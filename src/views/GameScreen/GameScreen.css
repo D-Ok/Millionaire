@@ -1,0 +1,53 @@
+.game-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 100%;
+}
+
+.mobile-buttons{
+    display: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.mobile-buttons:hover{
+    outline: none;
+}
+
+.mobile-buttons:focus{
+    outline: none;
+}
+
+.image-close{
+    background-image: url("/src/images/close.png");
+}
+
+.image-menu{
+    background-image: url("/src/images/menu.png");
+}
+
+
+@media only screen and (max-width: 900px) {
+    .game-container{
+        background-color: var(--black-5);
+        grid-template-columns: 1fr;
+        padding: 4rem 0 1.5rem;
+        box-sizing: border-box;
+    }
+
+    .mobile-buttons{
+        position: absolute;
+        display: block;
+        height: 15px;
+        width: 16px;
+        margin: 20px;
+        top: 0;
+        right: 0;
+
+        background-color: transparent;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+}
