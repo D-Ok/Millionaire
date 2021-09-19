@@ -5,16 +5,24 @@ To start the game follow the [link](https://d-ok.github.io/Millionaire/).
 ## Load source code on your computer
 
 In the folder on your computer run the command:
-### `npm clone https://github.com/D-Ok/Millionaire.git`
+ ```
+ npm clone https://github.com/D-Ok/Millionaire.git
+ ```
 
 Move to the direct folder of the App: 
-### `cd millionaire`
+```
+cd millionaire
+```
 
 Install all packages used in the application by running: 
-### `npm install`
+```
+npm install
+```
 
 Run the app in the development mode:
-###`npm start`
+```
+npm start
+```
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
@@ -30,9 +38,9 @@ key | string | unique identificator for every question
 score | number | number of score that user can earn for current question
 question | string | question 
 correct | [string] | Array of correct answers for this question
-options | [{[options](#Option)}] | Array of available options for this question
+options | [{[options](#option)}] | Array of available options for this question
 
-#Option
+# Option
 
 Name | Type | Description
 ------------ | ------------- | -------------
