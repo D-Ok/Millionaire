@@ -22,6 +22,7 @@
 @media only screen and (max-width: 600px) {
     .act-container{
         display: grid;
+        grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
         padding: 0;
     }
@@ -39,5 +40,6 @@
         text-align: center;
         align-items: center;
         padding: 1rem;
+        justify-content: center;
     }
 }

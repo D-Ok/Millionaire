@@ -45,8 +45,9 @@
 .option-text.option-label{
     width: 100%;
     margin: 0;
-    padding: 0;
+    padding: 0 16px 0 0;
     text-align: start;
+    box-sizing: border-box;
 }
 
 .option-id{
@@ -114,6 +115,11 @@
     .option-container{
         margin: 0.25rem 0;
         justify-content: space-between;
+    }
+
+    .option-container.can-hover:hover{
+        outline: none;
+        cursor: pointer;
     }
 }
 

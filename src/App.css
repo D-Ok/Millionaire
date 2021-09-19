@@ -111,6 +111,7 @@ body{
 
 .App{
   height: 100vh;
+  box-sizing: content-box;
 }
 
 
