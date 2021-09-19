@@ -34,10 +34,10 @@ const Option : FC<OptionProps> = ({
   >
     <div className="option image-base">
       {item && (
-        <div className="option-text-container">
-          <span className="option-text option-id">{item.id}</span>
-          <p className="option-text option-label">{item.text}</p>
-        </div>
+      <div className="option-text-container">
+        <span className="option-text option-id">{item.id}</span>
+        <p className="option-text option-label">{item.text}</p>
+      </div>
       )}
     </div>
   </button>

@@ -42,7 +42,24 @@ html {
   --prize-width: 240px;
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1300px) {
+  html {
+    --default-font-size: 18px;
+    --question-font-size: 28px;
+    --headline-font-size: 50px;
+
+    --buttop-height: 60px;
+    --buttop-width: 294px;
+
+    --option-height: 68px;
+    --option-width: 330px;
+
+    --prize-height: 32px;
+    --prize-width: 220px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
   html {
     --default-font-size: 16px;
     --question-font-size: 24px;
@@ -53,9 +70,9 @@ html {
     --buttop-width: 292px;
 
     --option-height: 64px;
-    --option-width: 260px;
+    --option-width: 250px;
 
-    --prize-height: 32px;
+    --prize-height: 28px;
     --prize-width: 220px;
   }
 }

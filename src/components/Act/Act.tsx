@@ -11,8 +11,8 @@ const defaultProps = {
   options: [],
   correct: [],
   onEndAct: FUNCTIONS.END_ACT,
-  waitResults: 2000,
-  waitSelected: 2000,
+  waitResults: 1000,
+  waitSelected: 1500,
 };
 
 interface ActProp {

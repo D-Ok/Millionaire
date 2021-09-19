@@ -30,12 +30,16 @@ const GameScreen: FC<GameScreenProp> = ({ questions, onEndGame, currency }) => {
   const [isScoreView, setIsScoreView] = useState(false);
   const [question, setQuestion] = useState<IQuestion | undefined>();
 
-  const listener = useCallback((entires: any) => {
-    if (entires && entires[0]) {
-      const mobile = entires[0].contentRect.width < 900;
-      if (isMobile !== mobile) setIsMobile(mobile);
+  const listener = (entries: any) => {
+    if (entries && entries[0]) {
+      const mobile = entries[0].contentRect.width < 900;
+
+      if (isMobile !== mobile) {
+        setIsScoreView(!mobile);
+        setIsMobile(mobile);
+      }
     }
-  }, [isMobile]);
+  };
 
   useEffect(() => {
     if (questions) {
@@ -51,7 +55,7 @@ const GameScreen: FC<GameScreenProp> = ({ questions, onEndGame, currency }) => {
     const resizeObserver = new ResizeObserver(listener);
     resizeObserver.observe(document.documentElement);
     return () => resizeObserver.unobserve(document.documentElement);
-  }, []);
+  }, [isMobile]);
 
   useEffect(() => {
     const curStep = steps.find((s) => s.score === score);
